@@ -77,7 +77,7 @@ class Simulator(object):
         """
         Stats after one round is finished.
         """
-        print "round={round} dice={dice:<5} less_then={less_then:<5} bet={bet:.8f} profit={profit:+.8f} chance={win:.3f}% payout=x{payout:.5f} balance={balance:.8f} {custom_stat}".format(
+        print("round={round} dice={dice:<5} less_then={less_then:<5} bet={bet:.8f} profit={profit:+.8f} chance={win:.3f}% payout=x{payout:.5f} balance={balance:.8f} {custom_stat}".format())
             round=round_id,
             dice=dice,
             less_then=less_then,
@@ -96,7 +96,7 @@ class Simulator(object):
         rounds_won_percent = rounds_won / float(rounds_won + rounds_lost) * 100
         rounds_lost_percent = rounds_lost / float(rounds_won + rounds_lost) * 100
         avg_balance = self.cumulative_balance /  (rounds_won + rounds_lost)
-        print "initial_balance={initial_balance:.8f} balance={balance:.8f} max_balance={max_balance:.8f}/{max_balance_percent:.2f}% avg_balance={avg_balance:.8f} rounds_won={rounds_won}/{rounds_won_percentage:.2f}% rounds_lost={rounds_lost}/{rounds_lost_percentage:.2f}% {custom_stat}".format(
+        print("initial_balance={initial_balance:.8f} balance={balance:.8f} max_balance={max_balance:.8f}/{max_balance_percent:.2f}% avg_balance={avg_balance:.8f} rounds_won={rounds_won}/{rounds_won_percentage:.2f}% rounds_lost={rounds_lost}/{rounds_lost_percentage:.2f}% {custom_stat}".format(
             initial_balance=self.initial_balance,
             max_balance=self.max_balance,
             rounds_won=rounds_won,
@@ -106,7 +106,7 @@ class Simulator(object):
             rounds_lost_percentage=rounds_lost_percent,
             avg_balance=avg_balance,
             balance=self.balance,
-            custom_stat=self.custom_overall_output_string)
+            custom_stat=self.custom_overall_output_string))
 
     def add_to_round_output(self, output):
         """

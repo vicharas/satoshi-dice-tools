@@ -47,7 +47,7 @@ class Api:
         max_roll = 64225
 
         if (below_roll_to_win < min_roll or below_roll_to_win > max_roll):
-            print "{date} [error]: below_roll_to_win must be between {min_roll}-{max_roll} range".format(date=datetime.datetime.now(), max_roll=max_roll, min_roll=min_roll)
+            print("{date} [error]: below_roll_to_win must be between {min_roll}-{max_roll} range".format(date=datetime.datetime.now(), max_roll=max_roll, min_roll=min_roll))
             return
 
         if self.next_round == {}:
@@ -69,8 +69,8 @@ class Api:
         # in case of failure
         response_json = json.load(response)
         if response_json["status"] == "fail":
-            print "{date} [error]: Was unable to submit your bet".format(date=datetime.datetime.now())
-            print "{date} [response]: {response}".format(date=datetime.datetime.now(), response=response_json)
+            print("{date} [error]: Was unable to submit your bet".format(date=datetime.datetime.now()))
+            print("{date} [response]: {response}".format(date=datetime.datetime.now(), response=response_json))
             return
 
         # server returns nextRound object, on next bet we will use it instead
