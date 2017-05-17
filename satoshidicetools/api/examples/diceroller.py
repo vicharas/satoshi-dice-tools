@@ -14,8 +14,8 @@ class DiceRoller:
         self.output_bet_info(result)
 
     def output_bet_info(self, result):
-        print "{date}:".format(date=datetime.datetime.now())
-        print "bet={bet:.8f} payout={payout:.8f} profit={profit:.8f} balance={balance:.8f} outcome={outcome} probability={probability}% target={target} roll={roll}".format(
+        print("{date}:".format(date=datetime.datetime.now()))
+        print("bet={bet:.8f} payout={payout:.8f} profit={profit:.8f} balance={balance:.8f} outcome={outcome} probability={probability}% target={target} roll={roll}\n".format(
         bet=result["bet"]["betInSatoshis"],
         payout=result["bet"]["payoutInSatoshis"],
         profit=result["bet"]["profitInSatoshis"],
@@ -23,5 +23,4 @@ class DiceRoller:
         probability=result["bet"]["probability"],
         target=result["bet"]["target"],
         roll=result["bet"]["roll"],
-        outcome=result["bet"]["result"])
-        print "\n"
+        outcome=result["bet"]["result"]))
